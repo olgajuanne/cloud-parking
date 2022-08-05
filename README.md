@@ -7,7 +7,7 @@ Desafio de projeto na plataforma de cursos online <a href="https://dio.me/"><str
 
 ## 🎯 Objetivo do Projeto
 <p>Construir uma <strong>API</strong> para controle de um estacionamento de veículos. Esta <strong>API</strong> deverá controlar entrada e saída de veículos. 
-Os dados deverão ser cadastrados em um banco de dados relacinal.
+Os dados deverão ser cadastrados em um banco de dados relacional.
 Está <strong>API</strong> será exposta na nuvem, porém com controle de acesso. 
 Desenvolvida...</p>
 
