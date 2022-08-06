@@ -41,6 +41,7 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${springfox-swagger.version}</version>
 		</dependency>
+		
 		<dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>

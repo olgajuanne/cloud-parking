@@ -21,6 +21,7 @@ public class SwaggerConfig {
               .apis(RequestHandlerSelectors.basePackage("com.dio.cloudparking"))
               .build()
               .apiInfo(metaData());
+              
   }
 
   private ApiInfo metaData() {
