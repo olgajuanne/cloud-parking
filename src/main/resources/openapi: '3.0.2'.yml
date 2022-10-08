@@ -1,0 +1,12 @@
+openapi: '3.0.2'
+info:
+  title: Parking REST API
+  version: '1.0'
+servers:
+  - url: jdbc:postgresql://localhost:5432/parking
+paths:
+  /test:
+    get:
+      responses:
+        '200':
+          description: Spring Boot REST API for Parking
