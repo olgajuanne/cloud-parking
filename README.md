@@ -1,9 +1,6 @@
 # Realizando Deploy na Nuvem de um conjunto de API’s desenvolvida em Spring Boot 
 Desafio de projeto na plataforma de cursos online <a href="https://dio.me/"><strong> Digital Innovation One</strong></a>.<br>
-
-## Status do Projeto
-🚧 Projeto em construção 🚧
-
+Especialista: Sandro Giacomozzi
 
 ## 🎯 Objetivo do Projeto
 <p>Construir uma <strong>API</strong> para controle de um estacionamento de veículos. Esta <strong>API</strong> deverá controlar entrada e saída de veículos. 
@@ -26,17 +23,26 @@ Desenvolvida...</p>
 - Heroku
 
 
-## 
+### Modificações 
 
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId> 
+		<version>2.5.2</version>
+	</parent>
+
+  <!-- https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter  para fazer o swagger funcionar -->
+		 <dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-boot-starter</artifactId>
+				<version>3.0.0</version>
+		</dependency> 
 
 
 ## 🔗 Links Úteis
+[Acesso ao Swagger](http://localhost:8080/swagger-ui/index.html)
 
-
-
-## Licença
-<!-- Instituto de Tecnologia de Massachusetts  -->
-**MIT**
 
 
 

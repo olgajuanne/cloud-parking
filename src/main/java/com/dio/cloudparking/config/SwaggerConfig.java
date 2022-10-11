@@ -18,10 +18,8 @@ import springfox.documentation.service.SecurityScheme;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
-//import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Component
-//@EnableSwagger2
 public class SwaggerConfig {
   
   @Bean
@@ -30,10 +28,11 @@ public class SwaggerConfig {
               .select()
               .apis(RequestHandlerSelectors.basePackage("com.dio.cloudparking"))
               .build()
-              .apiInfo(metaData());
-              // .securityContexts(Arrays.asList(actuatorSecurityContext()))
-              // .securitySchemes(Arrays.asList(basicAuthScheme()));
+              .apiInfo(metaData())
+              .securityContexts(Arrays.asList(actuatorSecurityContext()))
+              .securitySchemes(Arrays.asList(basicAuthScheme()));
   }
+
 
   private SecurityContext actuatorSecurityContext() {
     return SecurityContext.builder()
@@ -41,19 +40,19 @@ public class SwaggerConfig {
             .build();
   }
 
-  // private SecurityScheme basicAuthScheme() {
-  //     return new BasicAuth("basicAuth");
-  // }
+   private SecurityScheme basicAuthScheme() {
+       return new BasicAuth("basicAuth");
+   }
 
    private SecurityReference basicAuthReference() {
        return new SecurityReference("basicAuth", new AuthorizationScope[0]);
    }
 
-  // private List<SecurityScheme> basicScheme() {
-  //     List<SecurityScheme> schemeList = new ArrayList<>();
-  //     schemeList.add(new BasicAuth("basicAuth"));
-  //     return schemeList;
-  // }
+   private List<SecurityScheme> basicScheme() {
+       List<SecurityScheme> schemeList = new ArrayList<>();
+       schemeList.add(new BasicAuth("basicAuth"));
+       return schemeList;
+   }
 
    private ApiKey apiKey() {
        return new ApiKey("apiKey", "Authorization", "header");

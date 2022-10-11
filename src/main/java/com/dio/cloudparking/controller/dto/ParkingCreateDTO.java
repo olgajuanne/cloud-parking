@@ -35,6 +35,7 @@ public class ParkingCreateDTO {
         return color;
     }
 
-    public void setColor(String string) {
+    public void setColor(String color) {
+        this.color = color;
     }
 }
